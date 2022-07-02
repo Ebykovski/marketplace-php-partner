@@ -25,6 +25,7 @@ class ActiveRelationOffer extends ObjectModel
     protected $deliveryDurationDays;
     protected $processingState;
     protected $weightDimensions;
+    protected $pictures;
 
     protected $mappingClasses = [
         'processingState' => ProcessingState::class,
@@ -182,4 +183,12 @@ class ActiveRelationOffer extends ObjectModel
     {
         return $this->weightDimensions;
     }
+    
+    /**
+     * @return string[]
+     */
+    public function getPictures()
+    {
+        return $this->pictures;
+    }    
 }
